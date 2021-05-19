@@ -174,6 +174,6 @@ elif transformation == "B":
 elif transformation == "C":
     rotation()
 elif transformation == "D":
-    print("[yellow]Coming[/] [dark_orange]Soon...![/]")
+    print("[yellow]Coming[/] [dark_orange]Soon[/][yellow]![/]")
 elif transformation == "E":
     translation()
