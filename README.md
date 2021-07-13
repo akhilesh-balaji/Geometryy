@@ -1,7 +1,7 @@
 # Geometryy
 <!-- ## A tool to accurately describe transformations on the Cartesian plane, given the image and pre-image coordinates. -->
 
-![](./Screenshot.svg)
+![Geometryy](./Screenshot.svg)
 
 The Cartesian Plane was popularized by René Descartes. In fact, the plane itself in named after him. It is defined by two perpendicular number-lines, called axes. In the Cartesian plane, a slice of Cartesian space, these two number lines are called <img src="https://latex.codecogs.com/svg.latex?&space;x" title="x"/>  and <img src="https://latex.codecogs.com/svg.latex?\&space;y" title="y"/> axes. Any point in the Cartesian plane can be uniquely described by two numbers—one that describes the point's vertical position, the <img src="https://latex.codecogs.com/svg.latex?\&space;y" title="y"/> coordinate, and one that describes the point's horizontal position, the <img src="https://latex.codecogs.com/svg.latex?\&space;x" title="x"/> coordinate. Thus, any point in the plane can be described by the set of numbers <img src="https://latex.codecogs.com/svg.latex?\&space;(x,y)" title="(x,y)"/>. Together, these two numbers that describe the object's position in the plane are called the object's coordinates.
 

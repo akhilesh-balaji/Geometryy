@@ -141,7 +141,7 @@ def point_angle_rotation(
     perp_b_b_img = perp_b_b_img_lst[0]
 
     if perp_a_a_img == "x = 0.0" and perp_b_b_img == "x = 0.0":
-        # TODO: por is poi of equation of AB and A'B'
+        # TODO: `por` is `poi` of the equation of AB and A'B'
         por = Coordinate(0, 0)
     else:
         if (perp_a_a_img_lst[1][0]
@@ -262,44 +262,3 @@ def point_scale_enlargement(
             lhs, rhs)[1])
 
     return [k, coe]
-
-
-# -------------------------
-#  ******  Tests  ******
-# -------------------------
-
-# # Mirror Line Test
-# c1 = Coordinate(-4, 4)
-# c2 = Coordinate(-4, 2)
-# print(c1)
-# print(c2)
-
-# print(mirror_line(c1, c2))
-
-# # PoR & Angle Test
-# a = Coordinate(1, 1)
-# b = Coordinate(2, 2)
-# a_img = Coordinate(-1, 1)
-# b_img = Coordinate(-2, 2)
-
-# print(point_angle_rotation(a, b, a_img, b_img))
-
-# # Translation test
-# a = Coordinate(1, 2)
-# # [4,-3] -> vector
-# a_img = Coordinate(5, -1)
-
-# print(translation_vector(a, a_img))
-
-# Dilation test
-# a = Coordinate(5, 6)
-# b = Coordinate(6, 8)
-# a_img = Coordinate(35, 42)
-# b_img = Coordinate(540, 720)
-
-# a = Coordinate(1, 2)
-# b = Coordinate(3, 3)
-# a_img = Coordinate(0, 3)
-# b_img = Coordinate(4, 5)
-
-# print(point_scale_enlargement(a, b, a_img, b_img))
