@@ -19,6 +19,7 @@ This is why I developed Geometryy. Simply choose the transformation you feel is 
 As of now, Geometryy is slightly buggy, due to there being multiple ways of describing a transformation in different scenarios (more on this later).
 
 ## Using Geometryy
+
 Download the source-code from the releases page, extract the `.zip` to another folder. `cd` to the directory in your terminal and run `python flow.py`. There might be a few dependencies you need to install: `rich` for a colourful output and `numpy`. Install them with the following commands:
 ```
 $ pip install rich
@@ -37,13 +38,17 @@ Simply enter the letter next to the transformation, and press <kbd>Enter</kbd>. 
 If all *doesn't* go well, you have either encountered a bug, or you have provided a set of coordinates which have not gone through the same transformation, or the object coordinate, when that transformation is applied to it, cannot possibly map on to the image.
 
 ## How it works
+
 ### Translation
+
 <img src="https://latex.codecogs.com/svg.latex?\&space;A" title="A"/> is translated by a column vector <img src="https://latex.codecogs.com/svg.latex?\&space;\begin{pmatrix}a\\b\end{pmatrix}" title="\begin{pmatrix}a\\b\end{pmatrix}"/>, where <img src="https://latex.codecogs.com/svg.latex?\&space;a" title="a"/> describes lateral movement and <img src="https://latex.codecogs.com/svg.latex?\&space;b" title="b"/> represents the vertical movement of the point. Thus, to find the column vector that describes the translation of <img src="https://latex.codecogs.com/svg.latex?\&space;A" title="A"/> to map it on to <img src="https://latex.codecogs.com/svg.latex?\&space;A'" title="A'"/>, one simply subtracts <img src="https://latex.codecogs.com/svg.latex?\&space;A" title="A"/> from <img src="https://latex.codecogs.com/svg.latex?\&space;A'" title="A'"/> (subtracting <img src="https://latex.codecogs.com/svg.latex?\&space;x_1" title="x_1"/> from <img src="https://latex.codecogs.com/svg.latex?\&space;x_2" title="x_2"/>, and <img src="https://latex.codecogs.com/svg.latex?\&space;y_1" title="y_1"/> from <img src="https://latex.codecogs.com/svg.latex?\&space;y_2" title="y_2"/>, where coordinates with subscript <img src="https://latex.codecogs.com/svg.latex?\&space;1" title="1"/> belong to <img src="https://latex.codecogs.com/svg.latex?\&space;A" title="A"/> and coordinates with subscript <img src="https://latex.codecogs.com/svg.latex?\&space;2" title="2"/> belong to <img src="https://latex.codecogs.com/svg.latex?\&space;A'" title="A'"/>).
 
 ### Reflection
+
 When an object is reflected about a mirror line <img src="https://latex.codecogs.com/svg.latex?\&space;f(x)" title="f(x)"/>, its image will be the same distance from the mirror line as the object. Thus, the mirror line will be the perpendicular bisector of the line that connects <img src="https://latex.codecogs.com/svg.latex?\&space;A" title="A"/> and <img src="https://latex.codecogs.com/svg.latex?\&space;A'" title="A'"/>.
 
 ### Rotation
+
 The point of rotation <img src="https://latex.codecogs.com/svg.latex?\&space;P" title="P"/> can be found by finding the point of intersection of the perpendicular bisectors of <img src="https://latex.codecogs.com/svg.latex?\&space;\overline{AA'}" title="\overline{AA'}"/> and <img src="https://latex.codecogs.com/svg.latex?\&space;\overline{BB'}" title="\overline{BB'}"/>. The point of intersection can be found by simultaneously solving the equations of both bisectors. However, this method does not work is the perpendicular bisectors have the same equation. Then, the angle of rotation <img src="https://latex.codecogs.com/svg.latex?\&space;\theta" title="\theta"/> can be found by computing the angle between <img src="https://latex.codecogs.com/svg.latex?\&space;\overline{AP}" title="\overline{AP}"/> and <img src="https://latex.codecogs.com/svg.latex?\&space;\overline{A'P}" title="\overline{A'P}"/>. This angle, in radians, is simply
 
 <img src="https://latex.codecogs.com/svg.latex?\&space;\tan^{-1}\left(\frac{m_1-m_2}{1+m_1m_2}\right)" title="\tan^{-1}\left(\frac{m_1-m_2}{1+m_1m_2}\right)">
@@ -51,6 +56,7 @@ The point of rotation <img src="https://latex.codecogs.com/svg.latex?\&space;P" 
 where <img src="https://latex.codecogs.com/svg.latex?\&space;m_1" title="m_1"/> and <img src="https://latex.codecogs.com/svg.latex?\&space;m_2" title="m_2"/> are the slopes of <img src="https://latex.codecogs.com/svg.latex?\&space;\overline{AP}" title="\overline{AP}"/> and <img src="https://latex.codecogs.com/svg.latex?\&space;\overline{A'P}" title="\overline{A'P}"/>. The value in radians can easily be converted to degrees.
 
 ### Dilation
+
 The scale factor of the dilation can be found by dividing the length of one side of the image shape by the length of one side of the object shape.
 
 <img src="https://latex.codecogs.com/svg.latex?\&space;k=\frac{A'B'}{AB}" title="k=\frac{A'B'}{AB}">
