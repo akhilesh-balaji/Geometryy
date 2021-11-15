@@ -128,7 +128,7 @@ def translation():
     vector_formatted = str(
         translation_vector(
             a, b)).replace(
-        "\n", "\n                            ").replace(".]", "]")
+        "\n", "\n" + (" " * 28)).replace(".]", "]")
 
     print(f"\nThe translation vector [blue]T₁[/] = {vector_formatted}")
     return translation_vector(a, b)

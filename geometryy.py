@@ -229,11 +229,6 @@ def point_scale_enlargement(
     b = point2
     b_img = point2_img
 
-    # try:
-    #     k = a_img.getX() / a.getX()
-    # except ZeroDivisionError:
-    #     k = a_img.getY() / a.getY()
-
     k = distance(a_img, b_img) / distance(a, b)
 
     slope_a_a_img = (a_img.getY() - a.getY()) / (a_img.getX() - a.getX())
